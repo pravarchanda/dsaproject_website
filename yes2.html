@@ -1,0 +1,177 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<html>
+<head>
+	<script type="text/javascript" encoding="UTF-8">
+
+var lists=["aerosolspray","army knife","blender","blower","can opener","camera","coffee maker","ducttape","dvd player","electric blanket","flashdrive","flashlight","fishingrod","ginsu knife","hearing aid","illiteracy","internet","itching","jacuzzi","keyboard","laziness","lunchbox","microwave","nail polish","ovens","pen","printer","programming","quartz watch","rain","roomba","sunglasses","stapler","soaker","toaster","teflon","telephone","video recoreder","walkman","zipper","zippo"];
+
+var link=["1.jpg","a.jpg","b.jpeg","blower.jpeg","coffee.jpg","4.jpg","4.jpg","duct.jpeg","player.jpg","eb.jpg","4.jpg","flash.jpg","fish.jpeg","ginsu.jpeg","jacuzzi-7.jpg","4.jpg","4.jpg","4.jpg","4.jpg","q.jpg","4.jpg","lunchbox.jpg","microwave.jpg","modern-ovens.jpg","nail-polish.jpg","pen.jpg","player.jpg","printer.jpg","quartzwatch.jpg","4.jpg","roomba.jpg","sa.jpg","sm.png","soaker.jpg","stapler.jpg","sunglasses-fb.jpg","t.jpg","toaster.jpg","4.jpg","video.jpeg","walkman.jpg","zipper.jpeg","zippo.jpg"];
+var pos;
+var val=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var pos1=[1,2,4,7,9,10,13,15,16,19,19,21,22,23,24,26,29,30,32,34,34,35,35,35,40,40];
+function search(){
+var input=document.getElementById("text").value;
+console.log("INput="+input);
+for(i=0;i<26;i++)
+{
+if(input[0]==val[i])
+    pos=pos1[i];
+}
+
+            var string="<img src="+link[pos-1]+" width=25% height=45% style="+"border-radius:50%;"+"margin-right:5%;"+"><img src="+link[pos]+" width=30% height=50% style="+"border-radius:50%;>"+"<img src="+link[pos+1]+" width=25% height=45% style="+"border-radius:50%;"+"margin-left:5%;>"
+
+document.getElementById("image").innerHTML=string;
+            var string2="<p style="+"padding-right:65%;"+"color:#e59400;"+"font-size:200%; >"+"suggestion:"+"<br />"+lists[pos-1]+"</p><p style="+"color:#e59400;"+"font-size:200%;"+"margin-top:-5%>"+"best fit:"+"<br />"+lists[pos]+"</p><p style="+"padding-left:65%;"+"color:#e59400;"+"font-size:200%;"+"margin-top:-5%;>"+"suggestion:"+"<br />"+lists[pos+1]+"</p>";
+
+document.getElementById("image2").innerHTML=string2;
+    return;
+	
+	var string2="<img src=20.jpeg>";
+	document.getElementById("image").innerHTML=string2;
+
+}
+</script>
+
+
+<style>
+body{
+    background-color:#2A2E37;
+    height: 100%;
+}
+
+.text{
+    width: 30%;
+    height: 100px;
+    background-color: #242628;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    border-top:transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-color: #00FEDE;
+    border-width: 10px;
+    font-size: 200%;
+    padding-left: 1%;
+    color:#e59400;
+}
+.text:hover{
+    width:50%;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+}
+.shoot{
+    width: 10%;
+    height: 100px;
+    background-color: #00FEDE;
+    border:transparent;
+    color: #242628;
+    margin-left: -1%;
+    font-size: 200%;
+    border-bottom-right-radius:50%;
+    border-top-right-radius:50%;  
+}
+.t{
+    margin-top: 2%;
+}
+.demo1{
+    color:white;
+    margin-top: 10%;
+    font-size: 500%;
+}
+.a{
+    background-color: #009acd;
+    margin-left: 5%;
+    margin-right: 2%;
+    font-size: 200%;
+    padding-top: 10%;
+border-radius: 50%;
+    height: 50%;
+}
+.aa{
+    font-family: cursive;
+    background-color: #0ebfe9;
+border-radius: 50%;
+margin-top: -40%;
+padding-top: 40%;
+padding-bottom: 40%;
+font-family: ;
+}
+.b{
+    background-color: #0ebfe9;
+    margin-left: 2%;
+    margin-right: 2%;
+ padding-top: 10%;
+font-size: 300%;  
+    border-radius: 50%;
+    height: 50%;
+}
+.bb{
+    font-family: cursive;
+    background-color: #05E9FF;
+border-radius: 50%;
+margin-top: -25%;
+padding-top: 25%;
+padding-bottom: 25%;    
+}
+.c{
+    background-color: #009acd;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 9%;
+    font-size: 200%;
+    border-radius: 50%;
+    height: 50%;
+}
+.cc{
+    font-family: cursive;
+background-color: #0ebfe9;
+border-radius: 50%;
+margin-top: -35%;
+padding-top: 40%;
+padding-bottom: 40%;
+}
+.a1{
+    font-size: 200%;
+    font-family: cursive;
+    color: #e59400;
+    margin-top:5%;
+}
+.b1{
+    font-size: 200%;
+    font-family: cursive;
+    color: #e59400;
+    margin-top:5%;
+}
+.c1{
+    font-size: 200%;
+    font-family: cursive;
+    color: #e59400;
+    margin-top:5%;
+}
+</style>
+
+</head>
+<center>
+    <div class="t">
+<form action="demo_form.asp">
+ <input type="text" class="text" placeholder="SEARCH" name="FirstName" id="text">
+ <input type="button" value="search" class="shoot" onclick="search()">
+</form>
+</div >
+    <br /><br />
+<div id="image" class="row">
+    <div class="a col-xs-3"><div class="aa"><p>BIG</p></div></div>
+    <div class="b col-xs-4"><div class="bb"><p>BIGGER</p></div></div>
+    <div class="c col-xs-3"><div class="cc"><p>BIGGGEST</p></div></div>
+</div>
+<div id="image2" class="row">
+    <div class="col-xs-4"><div class="a1"><p>search</p></div></div>
+    <div class="col-xs-4"><div class="b1"><p>it all</p></div></div>
+    <div class="col-xs-4"><div class="c1"><p>here!!</p></div></div>
+</div>
+</div>
+</center>
+</body>
+
+<html>
