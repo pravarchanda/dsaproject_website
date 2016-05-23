@@ -1,0 +1,68 @@
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<html>
+
+<script>
+var a=0;
+var b="Information is power. But like all power, there are those who want to keep it for themselves.";
+function chng(  )
+{
+    document.getElementById('id1').innerHTML = b;
+    if(a==0)
+    {
+        b="What is the most important thing you could be working on in the world right now? ... And if you're not working on that, why aren't you?";
+        a=1;
+    }
+    else if(a==1)
+    {
+        b="Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.";
+        a=2;
+    }
+    else if(a==2)
+    {
+        b="With enough of us, around the world, we'll not just send a strong message opposing the privatization of knowledge - we'll make it a thing of the past.";
+        a=3;
+    }
+    else if(a==3)
+    {
+        b="No, you cannot force other people to change. You can, however, change just about everything else. And usually, that is enough.";
+        a=4;
+    }
+    else if(a==4)
+    {
+        b="Information is power. But like all power, there are those who want to keep it for themselves.";
+        a=0;
+    }
+}
+</script>
+
+<style>
+body{
+	background-image:url("bg.jpg");
+	background-size: 100%; 
+}
+.c2{
+    position: fixed;
+	margin-left: 60%;
+	margin-top: 5%;
+}
+p{  
+    margin-left: 60%;
+    margin-top: 5%;
+    margin-right: 5%;
+    color: white;
+    font-size: 300%; 
+}
+p:hover{
+    color: orange;
+}
+</style>
+<body>
+    <div class="c1">
+    <p id="id1">AARON<br />&nbsp&nbsp&nbsp&nbspSWARTZ</p>
+    </div>
+    <div class="c2">
+    <input type="button" value="CLICK THE BUTTON TO THINK MORE!!!" onclick="chng()" class="btn btn-warning c3"/>
+    </div>
+    </body>
+</html>
